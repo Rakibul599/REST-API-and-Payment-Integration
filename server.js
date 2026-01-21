@@ -6,6 +6,7 @@ const dotenv=require('dotenv');
 const registrationRouter=require('./router/registrationRouter');
 const loginRouter=require('./router/loginRouter');
 const profileRouter=require('./router/profileRoute');
+const productRouter=require('./router/productRouter');
 
 const server=express();
 dotenv.config();
@@ -22,6 +23,7 @@ mongoose
 server.use('/api',registrationRouter) //registration route
 server.use('/api',loginRouter) //login route
 server.use('/api',profileRouter) //login route
+server.use('/api',productRouter) //Products route
 
 
 
