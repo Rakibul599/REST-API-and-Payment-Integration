@@ -57,7 +57,7 @@ This project is a RESTful backend for a simple e-commerce system, built using No
    Refer to the `.env.example` file for placeholders.
 4. Start the Server:
    ```bash
-   npm run start
+   npm start
    ```
    The server will run on `http://localhost:3000`.
 

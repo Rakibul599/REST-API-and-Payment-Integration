@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "e7a359ba-3a93-425d-8f3e-f4b82e921935",
+    "name": "reqres",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40385647"
+  },
+  "item": [
+    {
+      "name": "http://localhost:3000/api/registration",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rakibul Alam\",\n  \"email\": \"rakibulalam@gmail.com\",\n  \"password\": \"R@kib123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://rest-api-and-payment-integration.onrender.com/api/registration",
+          "protocol": "https",
+          "host": [
+            "rest-api-and-payment-integration",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "registration"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/login",
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n  \"email\": \"rakibulalam@gmail.com\",\n  \"password\": \"R@kib123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://rest-api-and-payment-integration.onrender.com/api/login",
+          "protocol": "https",
+          "host": [
+            "rest-api-and-payment-integration",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OTczM2ViMzM1NzBiN2MxYjE3ZmI5MDIiLCJ1c2VybmFtZSI6IlJha2lidWwgQWxhbSIsImVtYWlsIjoicmFraWJ1bGFsYW1AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjkxNzgxMDAsImV4cCI6MTc2OTI2NDUwMH0.jSLevTjoZn0n82W7pPNAgQtjfHtDhQdUkMbrwtQ33rk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n  \"email\": \"rakibulalam59900@gmail.com\",\n  \"password\": \"R@kib123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://rest-api-and-payment-integration.onrender.com/api/profile",
+          "protocol": "https",
+          "host": [
+            "rest-api-and-payment-integration",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/products",
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OTczM2ViMzM1NzBiN2MxYjE3ZmI5MDIiLCJ1c2VybmFtZSI6IlJha2lidWwgQWxhbSIsImVtYWlsIjoicmFraWJ1bGFsYW1AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjkxNzgxMDAsImV4cCI6MTc2OTI2NDUwMH0.jSLevTjoZn0n82W7pPNAgQtjfHtDhQdUkMbrwtQ33rk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"description\": \"A high-precision wireless mouse with ergonomic design.\",\n  \"price\": 25.99,\n  \"currency\": \"USD\",\n  \"stock\": 100\n}\n\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://rest-api-and-payment-integration.onrender.com/api/products",
+          "protocol": "https",
+          "host": [
+            "rest-api-and-payment-integration",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/api/products",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OTZlNDgwNzhjNDU4MDQyNTkyYmIyOWYiLCJ1c2VybmFtZSI6IlJha2lidWwgQWxhbSIsImVtYWlsIjoicmFraWJ1bGFsYW01OTkwMEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc2ODkyODc2OCwiZXhwIjoxNzY5MDE1MTY4fQ.uM3kpsWwZjtQgYyEJpjNPc9wj53IoGMYc_52-wFcFeg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"description\": \"A high-precision wireless mouse with ergonomic design.\",\n  \"price\": 25.99,\n  \"currency\": \"USD\",\n  \"stock\": 100\n}\n\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://rest-api-and-payment-integration.onrender.com/api/products",
+          "protocol": "https",
+          "host": [
+            "rest-api-and-payment-integration",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://rest-api-and-payment-integration.onrender.com/api/orders/create",
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OTczYWJiYWUyMWQ2YjM0NWM0MzFhMjAiLCJ1c2VybmFtZSI6IlJha2lidWwgQWxhbSIsImVtYWlsIjoicmFraWJ1bGFsYW1AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjkxODgzMjUsImV4cCI6MTc2OTI3NDcyNX0.sO94VK0hK9UEcSNSjBkWWm9QGmAggTLFmHqz5JL_JbQ",
+            "type": "text"
+          },
+          {
+            "key": "Stripe-Signature",
+            "value": "test_signature",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"items\": [\n    { \"productId\": \"697387b9379bc9c112010ae0\", \"quantity\": 2 }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://rest-api-and-payment-integration.onrender.com/api/orders/create",
+          "protocol": "https",
+          "host": [
+            "rest-api-and-payment-integration",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "orders",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
