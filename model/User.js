@@ -30,6 +30,4 @@ const userSchema = mongoose.Schema(
 
 const User = mongoose.model("User", userSchema);
 
-module.exports = User; // Use CommonJS export
-
-const User = require("../model/User");
+module.exports = User; // Ensure this is the only export
