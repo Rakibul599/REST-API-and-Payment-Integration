@@ -19,11 +19,11 @@ const productSchema = mongoose.Schema(
     },
     currency: {
       type: String,
-      required: true, // Fix typo
+      required: true,
     },
     stock: {
       type: Number,
-      required: true, // Fix typo
+      required: true,
     },
   },
   {
@@ -34,9 +34,3 @@ const productSchema = mongoose.Schema(
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;
-
-if (!req.user || !req.user.userid) {
-  return res.status(401).json({ message: "Unauthorized: User not authenticated" });
-}
-
-res.status(200).json({ message: "Login jwt generated", token: `Bearer ${token}` });
