@@ -8,6 +8,8 @@ const loginRouter=require('./router/loginRouter');
 const profileRouter=require('./router/profileRoute');
 const productRouter=require('./router/productRouter');
 const orderRoutes = require("./router/orderRoutes");
+const errorHandler = require("./middleware/errorHandler");
+
 
 const server=express();
 dotenv.config();
@@ -26,6 +28,9 @@ server.use('/api',loginRouter) //login route
 server.use('/api',profileRouter) //login route
 server.use('/api',productRouter) //Products route
 server.use("/api/orders", orderRoutes);
+
+// error handler
+server.use(errorHandler);
 
 server.get('/',(req,res)=>{
     res.send("server is running");
