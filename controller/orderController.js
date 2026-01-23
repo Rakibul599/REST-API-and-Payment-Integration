@@ -1,12 +1,12 @@
 const Stripe = require("stripe");
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY); // Use your Stripe secret key from .env
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY); 
 const Order = require("../model/Order");
 const Product = require("../model/Product");
 
 // Create a new order and initiate payment
 exports.createOrder = async (req, res) => {
   try {
-    const { items } = req.body; // items = [{ productId, quantity }]
+    const { items } = req.body; 
     if (!items || items.length === 0) {
       return res.status(400).json({ message: "No items in the order" });
     }
@@ -28,7 +28,7 @@ exports.createOrder = async (req, res) => {
 
     // Create a payment intent
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: totalAmount * 100, // Stripe accepts amounts in cents
+      amount: totalAmount * 100, 
       currency: "usd",
       metadata: { userId: req.user.userid },
     });
@@ -47,7 +47,7 @@ exports.createOrder = async (req, res) => {
     res.status(201).json({
       message: "Order created successfully",
       orderId: order._id,
-      clientSecret: paymentIntent.client_secret, // Send this to the frontend for payment
+      clientSecret: paymentIntent.client_secret, 
     });
   } catch (error) {
     console.error(error);
@@ -64,7 +64,7 @@ exports.handleWebhook = async (req, res) => {
     event = stripe.webhooks.constructEvent(
       req.body,
       sig,
-      process.env.STRIPE_WEBHOOK_SECRET // Use your Stripe webhook secret from .env
+      process.env.STRIPE_WEBHOOK_SECRET 
     );
   } catch (err) {
     console.error(err.message);
