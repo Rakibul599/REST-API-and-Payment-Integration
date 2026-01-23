@@ -1,44 +1,44 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true
+      required: true,
     },
     items: [
       {
         productId: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Product"
+          ref: "Product",
         },
         quantity: {
           type: Number,
-          default: 1
-        }
-      }
+          default: 1,
+        },
+      },
     ],
     amount: {
       type: Number,
-      required: true
+      required: true,
     },
     currency: {
       type: String,
-      default: "USD"
+      default: "USD",
     },
     status: {
       type: String,
       enum: ["pending", "paid", "failed"],
-      default: "pending"
+      default: "pending",
     },
     paymentIntentId: {
-      type: String
-    }
+      type: String,
+    },
   },
   { timestamps: true }
 );
 
 const Order = mongoose.model("Order", orderSchema);
 
-export default Order;
+module.exports = Order; // Use CommonJS export
